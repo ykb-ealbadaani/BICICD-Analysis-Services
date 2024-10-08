@@ -288,7 +288,7 @@ Function New-FabricWorkspace {
 
     $itemRequest = @{ 
         displayName = $name
-        capacityId = $capacityId
+        # capacityId = $capacityId
     } | ConvertTo-Json
 
     try {        
