@@ -613,7 +613,7 @@ Function Import-FabricItems {
     # Datasets first 
 
     #$itemsInFolder = $itemsInFolder | Select-Object  @{n = "Order"; e = { if ($_.Name -like "*.pbism") { 1 } else { 2 } } }, * | sort-object Order    
-    $itemsInFolder = $itemsInFolder | Select-Object  @{n = "Order"; e = { if ($_.Name -like "*.pbism" -and $_.Name -notlike "*Report*" ) { 1 } else { 2 } } }, * | sort-object Order
+    $itemsInFolder = $itemsInFolder | Select-Object  @{n = "Order"; e = { if ($_.Name -like "*.pbism" -and $_.DirectoryName -notlike "*Report*" ) { 1 } else { 2 } } }, * | sort-object Order
 
     $datasetReferences = @{}
 
